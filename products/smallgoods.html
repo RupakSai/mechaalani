@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Mechaalani & Sons</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/truck-logo.png" />
+    <link rel="stylesheet" href="../Home.css">
+    <link rel="stylesheet" href="../products.css">
+    <link rel="stylesheet" href="./common.css">
+    <script src="../script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+          <div class="company-name">
+            <img src="./images/truck-logo.png" alt=""> Mechaalani & Sons
+          </div>
+        </a>
+        <div class="navbar-toggler">
+          <div class="icon" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="navbar-items">
+          <div class="navbar-item"><a href="../index.html">Home</a></div>
+          <div class="navbar-item"><a href="../about.html">About</a></div>
+          <div class="navbar-item"><a href="../products.html">Products</a></div>
+          <div class="navbar-item"><a href="../links.html">Links</a></div>
+          <div class="navbar-item"><a href="../contact.html">Contact Us</a></div>
+        </div>
+      </nav>
+      <main>
+        <div class="pro-head">
+            <span class="pro-1">
+                Products
+            </span>
+
+            <div class="pro-box">
+                <span class="pro-title pt2">
+                <span>
+                    <img src="../images/categories/soon.jpg" alt="">
+                    SMALL GOODS
+                </span>
+                </span>
+                <div class="pro-sub-box" id="productList">
+                    <div class="card">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-container">
+            <!-- <div class="ext-cont">
+                <span>
+                    Subscribe to email
+                </span>
+            </div> -->
+            <div class="light-cont">
+                <span class="logos">
+                    <img src="./images/tw-icn.png" alt="">
+                    <img src="./images/ig-icn.png" alt="">
+                    <img src="./images/fb-icn.png" alt="">
+                </span>
+                <img src="./images/banner-main.png" alt="" class="banner-main meech-banner">
+                <span>
+                    Mechaalani & Sons <br> <br>
+                    7 salvator drive, <br>
+                    Campbell field <br> <br>
+                    ABN: 43 093 138 688 <br> <br>
+                </span>
+            </div>
+            <div class="dark-cont">
+                <span>© 2023, Meechaalani & Sons | All Rights Reserved</span>
+                <span>Privacy Policy</span>
+                <span>Terms of Use</span>
+                <span>Credit Reporting Policy</span>
+            </div>
+        </div>
+      </main>
+      <script>
+        const imgLink = '../images/categories/soon.jpg'
+
+        const products = [
+        { id: 1, img: '../images/categories/soon.jpg', name: 'PUOPOLO FINE SHRED COTTO 3KG (4)', code: 'SM503FSA' },
+        { id: 2, img: '../images/categories/soon.jpg', name: 'PUOPOLO HOT CALABRESE SLICED 2.5KG (5)', code: 'SM505' },
+        { id: 3, img: '../images/categories/soon.jpg', name: 'PUOPOLO WIDE/DELI SHRED COTTO 3KG (4)', code: 'SM503WSA' },
+        { id: 4, img: '../images/categories/soon.jpg', name: 'DON REAL DICED BACON', code: 'SM009' },
+        { id: 5, img: '../images/categories/soon.jpg', name: 'KRC LONG RINDLESS BACON', code: 'SM001' },
+        { id: 6, img: '../images/categories/soon.jpg', name: 'KRC SHORT RINDLESS BACON', code: 'SM005' },
+        { id: 7, img: '../images/categories/soon.jpg', name: 'BERTOCCHI BUDGET BACON 500GM (24)', code: 'SM004' },
+    { id: 8, img: '../images/categories/soon.jpg', name: 'OTTOWURTH SPANISH CHORIZO SAUSAGE 2.5KG (2)', code: 'SM011' },
+    { id: 9, img: '../images/categories/soon.jpg', name: 'DON TRADITIONAL CALABRESE SALAMI SLICED 1KG (4)', code: 'SM003' },
+    { id: 10, img: '../images/categories/soon.jpg', name: 'KRC VIRGINA HAM LOAF PER KG', code: 'SM010U' },
+    { id: 11, img: '../images/categories/soon.jpg', name: 'PRINCI GUANCIALE PER KG (1.5KG APPROX)', code: 'SM020' },
+    { id: 12, img: '../images/categories/soon.jpg', name: "PRINCI N'DUJA 1KG (8)", code: 'SM066' },
+    { id: 13, img: '../images/categories/soon.jpg', name: 'TIBALDI DICED BACON 2.5KG (4)', code: 'SM520' },
+    { id: 14, img: '../images/categories/soon.jpg', name: 'AUS SMALLGOODS HALAL SHRED COTTO 2.5KG (8)', code: 'SM034' },
+    { id: 15, img: '../images/categories/soon.jpg', name: 'AUS SMALLGOODS HOT SALAMI 2.5KG (8)', code: 'SM032' },
+    { id: 16, img: '../images/categories/soon.jpg', name: 'DON TRADITIONAL CALABRESE SALAMI SLICED 1KG (4)', code: 'SM003' },
+    { id: 17, img: '../images/categories/soon.jpg', name: 'KRC VIRGINA HAM LOAF PER KG', code: 'SM010U' },
+    { id: 18, img: '../images/categories/soon.jpg', name: 'PRINCI GUANCIALE PER KG (1.5KG APPROX)', code: 'SM020' },
+    { id: 19, img: '../images/categories/soon.jpg', name: 'PRINCI NPRINCI N\'DUJA 1KG (8)', code: 'SM066' },
+    { id: 20, img: '../images/categories/soon.jpg', name: 'TIBALDI DICED BACON 2.5KG (4)', code: 'SM520' },
+    { id: 21, img: '../images/categories/soon.jpg', name: 'AUS SMALLGOODS HALAL SHRED COTTO 2.5KG (8)', code: 'SM034' },
+    { id: 22, img: '../images/categories/soon.jpg', name: 'AUS SMALLGOODS HOT SALAMI 2.5KG (8)', code: 'SM032' },
+    { id: 23, img: '../images/categories/soon.jpg', name: 'AUS SMALLGOODS COTTO WS 2.5KG (8)', code: 'SM031' },
+    { id: 24, img: '../images/categories/soon.jpg', name: 'LAGO PEPERONI HOT SLICED 2.5KG (6)', code: 'SM407' },
+    { id: 25, img: '../images/categories/soon.jpg', name: 'PUOPOLO MILD CALABRESE SLICED 2.5KG (5)', code: 'SM504' },
+    { id: 26, img: '../images/categories/soon.jpg', name: 'LAGO HOT CALABRESE SLICED 2.5KG (6)', code: 'SM404' },
+    {
+        id: 27,
+        img: "../images/categories/soon.jpg", // Replace '../images/categories/soon.jpg' with the actual image link
+        name: "LAGO FINE SHRED COTTO 2.5KG (8)",
+        code: "SM400FS"
+    },
+    {
+        id: 28,
+        img: "../images/categories/soon.jpg", 
+        name: "LAGO SLICED CABANA 2.5KG (6)",
+        code: "SM408"
+    },
+    {
+        id: 29,
+        img: "../images/categories/soon.jpg", 
+        name: "KRC SHREDDED REAL HAM 2.5KG (2)",
+        code: "SM014"
+    },
+    {
+        id: 30,
+        img: "../images/categories/soon.jpg", 
+        name: "PROSCIUTTO DI PARMA BONELESS LEG R/W (APPROX 7KG)",
+        code: "SM678U"
+    },
+    {
+        id: 31,
+        img: "../images/categories/soon.jpg", 
+        name: "LAGO MILD CALABRESE SLICED 2.5KG (6)",
+        code: "SM404M"
+    },
+    {
+        id: 32,
+        img: "../images/categories/soon.jpg", 
+        name: "PUOPOLO HOT HALAL CALABRESE 2.5KG (5)",
+        code: "SM505HAL"
+    },
+    {
+        id: 33,
+        img: "../images/categories/soon.jpg", 
+        name: "FABBRIS SLICED PROSCIUTTO 1KG (5)",
+        code: "SM061"
+    },
+    {
+        id: 34,
+        img: "../images/categories/soon.jpg", 
+        name: "LAGO THICK HOT PORK SAUSAGES 5KG",
+        code: "SM420A"
+    },
+    {
+        id: 35,
+        img: "../images/categories/soon.jpg", 
+        name: "LAGO THICK MILD PORK SAUSAGES 5KG",
+        code: "SM421A"
+    },
+    {
+        id: 36,
+        img: "../images/categories/soon.jpg", 
+        name: "LAGO PEPERONI MILD SLICED 2.5KG (6)",
+        code: "SM407M"
+    },
+    {
+        id: 37,
+        img: "../images/categories/soon.jpg", 
+        name: "PUOPOLO HALAL SMOKEY BEEF CUBES 2.5KG (5)",
+        code: "SM507"
+    },
+    {
+        id: 38,
+        img: "../images/categories/soon.jpg", 
+        name: "PARAMOUNT PREMIUM RED COTTO LOAVES 24KG PLEASE WEIGH",
+        code: "SM412U"
+    },
+    {
+        id: 39,
+        img: "../images/categories/soon.jpg", 
+        name: "PARAMOUNT CONTINENTAL CALABRESE FERMENTED SLICED HOT 2.5KG (6)",
+        code: "SM419"
+    },
+    {
+        id: 40,
+        img: "../images/categories/soon.jpg", 
+        name: "LAGO LONG RINDLESS RASHERS 2.5KG(8)",
+        code: "SM413"
+    },
+
+    { id: 41, img: '../images/categories/soon.jpg', name: 'LAGO THICK MILD PORK SAUSAGES 5KG', code: 'SM421AL' },
+    { id: 42, img: '../images/categories/soon.jpg', name: 'LAGO PEPERONI MILD SLICED 2.5KG (6)', code: 'SM407M' },
+    { id: 43, img: '../images/categories/soon.jpg', name: 'FABBRIS SLICED PROSCIUTTO 1KG (5)', code: 'SM061' },
+    { id: 44, img: '../images/categories/soon.jpg', name: 'LAGO THICK MILD PORK SAUSAGES 5KG', code: 'SM421A' },
+        { id: 45, img: '../images/categories/soon.jpg', name: 'BERTOCCHI MILD SOPRESSA PER KG', code: 'SM122U' },
+        { id: 46, img: '../images/categories/soon.jpg', name: 'BERTOCCHI MILD PANCETTA PER KG', code: 'SM124U' }
+        // Add all your items here with the appropriate ID, image link, name, and code
+    ];
+            // Function to display products
+            function displayProducts() {
+            const productListDiv = document.getElementById('productList');
+            let productsHTML = '';
+    
+            // Loop through products and create HTML
+            products.forEach(product => {
+                productsHTML += `
+                <div class="card">
+                    <img src='${product.img}' />
+                    <span>${product.name}</span>
+                    <span>Code: ${product.code}</span>
+                </div>
+                `;
+            });
+    
+            // Display products in HTML
+            productListDiv.innerHTML = productsHTML;
+            }
+    
+            // Call the function to display products
+            displayProducts();
+    </script>
+    </body>
+    </html>

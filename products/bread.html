@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Mechaalani & Sons</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/truck-logo.png" />
+    <link rel="stylesheet" href="../Home.css">
+    <link rel="stylesheet" href="../products.css">
+    <link rel="stylesheet" href="./common.css">
+    <script src="../script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+          <div class="company-name">
+            <img src="./images/truck-logo.png" alt=""> Mechaalani & Sons
+          </div>
+        </a>
+        <div class="navbar-toggler">
+          <div class="icon" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="navbar-items">
+          <div class="navbar-item"><a href="../index.html">Home</a></div>
+          <div class="navbar-item"><a href="../about.html">About</a></div>
+          <div class="navbar-item"><a href="../products.html">Products</a></div>
+          <div class="navbar-item"><a href="../links.html">Links</a></div>
+          <div class="navbar-item"><a href="../contact.html">Contact Us</a></div>
+        </div>
+      </nav>
+      <main>
+        <div class="pro-head">
+            <span class="pro-1">
+                Products
+            </span>
+
+            <div class="pro-box">
+                <span class="pro-title pt2">
+                <span>
+                    <img src="../images/categories/bread.jpg" alt="">
+                    Bread Products
+                </span>
+                </span>
+                <div class="pro-sub-box" id="productList">
+                    <div class="card">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-container">
+            <!-- <div class="ext-cont">
+                <span>
+                    Subscribe to email
+                </span>
+            </div> -->
+            <div class="light-cont">
+                <span class="logos">
+                    <img src="./images/tw-icn.png" alt="">
+                    <img src="./images/ig-icn.png" alt="">
+                    <img src="./images/fb-icn.png" alt="">
+                </span>
+                <img src="./images/banner-main.png" alt="" class="banner-main meech-banner">
+                <span>
+                    Mechaalani & Sons <br> <br>
+                    7 salvator drive, <br>
+                    Campbell field <br> <br>
+                    ABN: 43 093 138 688 <br> <br>
+                </span>
+            </div>
+            <div class="dark-cont">
+                <span>© 2023, Meechaalani & Sons | All Rights Reserved</span>
+                <span>Privacy Policy</span>
+                <span>Terms of Use</span>
+                <span>Credit Reporting Policy</span>
+            </div>
+        </div>
+      </main>
+      <script>
+        const imgLink = '../images/categories/soon.jpg'
+
+        const products = [
+    {
+        id: 1,
+        img: imgLink,
+        name: 'SENZA HAND MADE GLUTEN FREE PIZZA BASES 11" X 20 PER BOX',
+        code: 'MIP100',
+    },
+    {
+        id: 2,
+        img: imgLink,
+        name: 'JULIANS GLUTEN FREE PIZZA BASES 11" X 15 PER BOX',
+        code: 'MIP102',
+    },
+    {
+        id: 3,
+        img: imgLink,
+        name: "HEAVENHEAVEN'S GLUTEN FREE PIZZA BASES 11\" X 20 PER BOX",
+        code: 'MIP103',
+    },
+    {
+        id: 4,
+        img: imgLink,
+        name: 'ELVERSON GARLIC BREAD 10" (32)',
+        code: 'BRE006',
+    },
+    {
+        id: 5,
+        img: imgLink,
+        name: 'AGB GARLIC BREAD FROZEN 9" **SUB CUT** (40)',
+        code: 'BRE007',
+    },
+    {
+        id: 6,
+        img: imgLink,
+        name: 'AGB GARLIC BREAD FROZEN 9" (40)',
+        code: 'BRE008',
+    },
+    {
+        id: 7,
+        img: imgLink,
+        name: 'AGB GARLIC BREAD FROZEN 11" (32)',
+        code: 'BRE009',
+    },
+    {
+        id: 8,
+        img: imgLink,
+        name: 'SUPER FINE WHITE BREAD CRUMBS 10KG',
+        code: 'CE006',
+    },
+    {
+        id: 9,
+        img: imgLink,
+        name: 'FINE WHITE BREAD CRUMBS 10KG',
+        code: 'CE001',
+    },
+    {
+        id: 10,
+        img: imgLink,
+        name: 'WHITE JAPANESE BREADCRUMBS 10KG',
+        code: 'CE002',
+    },
+    {
+        id: 11,
+        img: imgLink,
+        name: 'EXECUTIVE CHEF CROUTONS 5KG',
+        code: 'MIC049',
+    },
+    {
+        id: 12,
+        img: imgLink,
+        name: 'WHITE BREADCRUMB COARSE 10KG',
+        code: 'CE004',
+    },
+];
+
+    
+            // Function to display products
+            function displayProducts() {
+            const productListDiv = document.getElementById('productList');
+            let productsHTML = '';
+    
+            // Loop through products and create HTML
+            products.forEach(product => {
+                productsHTML += `
+                <div class="card">
+                    <img src='${product.img}' />
+                    <span>${product.name}</span>
+                    <span>Code: ${product.code}</span>
+                </div>
+                `;
+            });
+    
+            // Display products in HTML
+            productListDiv.innerHTML = productsHTML;
+            }
+    
+            // Call the function to display products
+            displayProducts();
+    </script>
+    </body>
+    </html>

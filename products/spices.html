@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Mechaalani & Sons</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/truck-logo.png" />
+    <link rel="stylesheet" href="../Home.css">
+    <link rel="stylesheet" href="../products.css">
+    <link rel="stylesheet" href="./common.css">
+    <script src="../script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+          <div class="company-name">
+            <img src="./images/truck-logo.png" alt=""> Mechaalani & Sons
+          </div>
+        </a>
+        <div class="navbar-toggler">
+          <div class="icon" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="navbar-items">
+          <div class="navbar-item"><a href="../index.html">Home</a></div>
+          <div class="navbar-item"><a href="../about.html">About</a></div>
+          <div class="navbar-item"><a href="../products.html">Products</a></div>
+          <div class="navbar-item"><a href="../links.html">Links</a></div>
+          <div class="navbar-item"><a href="../contact.html">Contact Us</a></div>
+        </div>
+      </nav>
+      <main>
+        <div class="pro-head">
+            <span class="pro-1">
+                Products
+            </span>
+
+            <div class="pro-box">
+                <span class="pro-title pt2">
+                <span>
+                    <img src="../images/categories/soon.jpg" alt="">
+                    RICE, SALT & PEPPER
+                </span>
+                </span>
+                <div class="pro-sub-box" id="productList">
+                    <div class="card">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-container">
+            <!-- <div class="ext-cont">
+                <span>
+                    Subscribe to email
+                </span>
+            </div> -->
+            <div class="light-cont">
+                <span class="logos">
+                    <img src="./images/tw-icn.png" alt="">
+                    <img src="./images/ig-icn.png" alt="">
+                    <img src="./images/fb-icn.png" alt="">
+                </span>
+                <img src="./images/banner-main.png" alt="" class="banner-main meech-banner">
+                <span>
+                    Mechaalani & Sons <br> <br>
+                    7 salvator drive, <br>
+                    Campbell field <br> <br>
+                    ABN: 43 093 138 688 <br> <br>
+                </span>
+            </div>
+            <div class="dark-cont">
+                <span>© 2023, Meechaalani & Sons | All Rights Reserved</span>
+                <span>Privacy Policy</span>
+                <span>Terms of Use</span>
+                <span>Credit Reporting Policy</span>
+            </div>
+        </div>
+      </main>
+      <script>
+        const imgLink = '../images/categories/soon.jpg'
+
+        const products = [
+        {
+            id: 1,
+            img: imgLink,
+            name: "CV CRUSHED GARLIC 10KG",
+            code: "SP012"
+        },
+        {
+            id: 2,
+            img: imgLink,
+            name: "CSR CASTER SUGAR 25KG",
+            code: "SP147"
+        },
+        {
+            id: 3,
+            img: imgLink,
+            name: "RAW SUGAR 25KG",
+            code: "SP150"
+        },
+        {
+            id: 4,
+            img: imgLink,
+            name: "REFINED WHITE SUGAR 25KG",
+            code: "SP152B"
+        },
+        {
+            id: 5,
+            img: imgLink,
+            name: "OREGANO LEAVES 1KG",
+            code: "SP017"
+        },
+        {
+            id: 6,
+            img: imgLink,
+            name: "CHILLI FLAKES 1KG",
+            code: "SP002"
+        },
+        {
+            id: 7,
+            img: imgLink,
+            name: "COOKING SALT 25KG",
+            code: "SP104"
+        },
+        {
+            id: 8,
+            img: imgLink,
+            name: "VEGETA STOCK POWDER 1KG (12)",
+            code: "MIV001"
+        },
+        {
+            id: 9,
+            img: imgLink,
+            name: "CV CRUSHED GARLIC 1KG (6)",
+            code: "SP010"
+        },
+        {
+            id: 10,
+            img: imgLink,
+            name: "CRACKED BLACK PEPPER 1KG",
+            code: "SP021"
+        },
+        {
+            id: 11,
+            img: imgLink,
+            name: "SAXA TABLE SALT 10KG",
+            code: "SP101"
+        },
+        {
+            id: 12,
+            img: imgLink,
+            name: "NICE N TASTY CHICKEN BOOSTER 20KG",
+            code: "MIB002"
+        },
+        {
+            id: 13,
+            img: imgLink,
+            name: "NICE N TASTY CHICKEN SALT 3KG",
+            code: "SP008C"
+        },
+        {
+            id: 14,
+            img: imgLink,
+            name: "MAGGI CHICKEN BOOSTER 2.4KG (6) GLUTEN FREE",
+            code: "MIB015"
+        },
+        {
+            id: 15,
+            img: imgLink,
+            name: "MIXED HERBS 1KG",
+            code: "SP015"
+        },
+        {
+            id: 16,
+            img: imgLink,
+            name: "GROUND WHITE PEPPER 1KG",
+            code: "SP022"
+        },
+        {
+            id: 17,
+            img: imgLink,
+            name: "NICE N TASTY MOROCCAN SEASONING 8KG",
+            code: "SP033"
+        },
+        {
+            id: 18,
+            img: imgLink,
+            name: "SWEET HUNGARIAN PAPRIKA 1KG",
+            code: "SP025"
+        },
+        {
+            id: 19,
+            img: imgLink,
+            name: "BASIL 1KG",
+            code: "SP000"
+        },
+        {
+            id: 20,
+            img: imgLink,
+            name: "PARSLEY FLAKES 1KG",
+            code: "SP014B"
+        },
+        {
+            id: 21,
+            img: imgLink,
+            name: "GROUND BLACK PEPPER 1KG",
+            code: "SP019"
+        },
+        {
+            id: 22,
+            img: imgLink,
+            name: "NICE N TASTY BEEF BOOSTER 18KG",
+            code: "MIB001"
+        },
+        {
+            id: 23,
+            img: imgLink,
+            name: "NICE N TASTY VEGE T GOURMET STOCK 20KG",
+            code: "MIB042"
+        },
+        {
+            id: 24,
+            img: imgLink,
+            name: "NICE N TASTY CHICKEN BOOSTER 3KG",
+            code: "MIB004"
+        },
+        {
+            id: 25,
+            img: imgLink,
+            name: "ROYAL LINE GREEN PEPPERCORNS 800GM (12)",
+            code: "MIP014"
+        },
+        {
+            id: 26,
+            img: imgLink,
+            name: "MOROCCAN SPICE 1KG",
+            code: "SP032B"
+        },
+        {
+            id: 27,
+            img: imgLink,
+            name: "SAXA ROCK SALT 10KG",
+            code: "SP105"
+        },
+        {
+            id: 28,
+            img: imgLink,
+            name: "SICILIAN SALT SHAKERS 250GM (18)",
+            code: "SP109"
+        },
+        {
+            id: 29,
+            img: imgLink,
+            name: "NICE N TASTY CHICKEN YIROS MARINADE 3KG",
+            code: "SP009"
+        },
+        {
+            id: 30,
+            img: imgLink,
+            name: "MAGGI BEEF BOOSTER MAGGI 2.3KG (6)",
+            code: "MIB000"
+        },
+        {
+            id: 31,
+            img: imgLink,
+            name: "SOFT ICING SUGAR 500GM (18)",
+            code: "SP157"
+        },
+        {
+            id: 32,
+            img: imgLink,
+            name: "WHOLE PEPPERCORNS 1KG",
+            code: "SP027"
+        },
+        {
+            id: 33,
+            img: imgLink,
+            name: "LEMON PEPPER 1KG",
+            code: "SP023D"
+        },
+        {
+            id: 34,
+            img: imgLink,
+            name: "NICE N TASTY BEEF BOOSTER 3KG",
+            code: "MIB003"
+        },
+        {
+            id: 35,
+            img: imgLink,
+            name: "MILD CURRY POWDER 1KG",
+            code: "SP006"
+        },
+        {
+            id: 36,
+            img: imgLink,
+            name: "GROUND WHITE PEPPER 1KG",
+            code: "SP022NICE N TASTY MOROCCAN SEASONING 8KGCode:SP033"
+        },
+        {
+            id: 37,
+            img: imgLink,
+            name: "SWEET HUNGARIAN PAPRIKA 1KG",
+            code: "SP025"
+        },
+        {
+            id: 38,
+            img: imgLink,
+            name: "BASIL 1KG",
+            code: "SP000"
+        },
+        {
+            id: 39,
+            img: imgLink,
+            name: "PARSLEY FLAKES 1KG",
+            code: "SP014B"
+        },
+        {
+            id: 40,
+            img: imgLink,
+            name: "GROUND BLACK PEPPER 1KG",
+            code: "SP019"
+        },
+        {
+            id: 41,
+            img: imgLink,
+            name: "NICE N TASTY BEEF BOOSTER 18KG",
+            code: "MIB001"
+        },
+        {
+            id: 42,
+            img: imgLink,
+            name: "NICE N TASTY VEGE T GOURMET STOCK 20KG",
+            code: "MIB042"
+        },
+        {
+            id: 43,
+            img: imgLink,
+            name: "NICE N TASTY CHICKEN BOOSTER 3KG",
+            code: "MIB004"
+        },
+        {
+            id: 44,
+            img: imgLink,
+            name: "ROYAL LINE GREEN PEPPERCORNS 800GM (12)",
+            code: "MIP014"
+        },
+        {
+            id: 45,
+            img: imgLink,
+            name: "MOROCCAN SPICE 1KG",
+            code: "SP032B"
+        },
+        {
+            id: 46,
+            img: imgLink,
+            name: "SAXA ROCK SALT 10KG",
+            code: "SP105"
+        },
+        {
+            id: 47,
+            img: imgLink,
+            name: "SICILIAN SALT SHAKERS 250GM (18)",
+            code: "SP109"
+        },
+        {
+            id: 48,
+            img: imgLink,
+            name: "NICE N TASTY CHICKEN YIROS MARINADE 3KG",
+            code: "SP009"
+        },
+        {
+            id: 49,
+            img: imgLink,
+            name: "MAGGI BEEF BOOSTER MAGGI 2.3KG (6)",
+            code: "MIB000"
+        },
+        {
+            id: 50,
+            img: imgLink,
+            name: "SOFT ICING SUGAR 500GM (18)",
+            code: "SP157"
+        },
+        {
+            id: 51,
+            img: imgLink,
+            name: "WHOLE PEPPERCORNS 1KG",
+            code: "SP027"
+        },
+        {
+            id: 52,
+            img: imgLink,
+            name: "LEMON PEPPER 1KG",
+            code: "SP023D"
+        },
+        {
+            id: 53,
+            img: imgLink,
+            name: "NICE N TASTY BEEF BOOSTER 3KG",
+            code: "MIB003"
+        },
+        {
+            id: 54,
+            img: imgLink,
+            name: "MILD CURRY POWDER 1KG",
+            code: "SP006"
+        }
+    ];
+    const uniqueNames = Array.from(new Set(products.map(product => product.name)));
+
+            // Function to display products
+            function displayProducts() {
+            const productListDiv = document.getElementById('productList');
+            let productsHTML = '';
+    
+            // Loop through products and create HTML
+            products.forEach(product => {
+                productsHTML += `
+                <div class="card">
+                    <img src='${product.img}' />
+                    <span>${product.name}</span>
+                    <span>Code: ${product.code}</span>
+                </div>
+                `;
+            });
+    
+            // Display products in HTML
+            productListDiv.innerHTML = productsHTML;
+            }
+    
+            // Call the function to display products
+            displayProducts();
+    </script>
+    </body>
+    </html>

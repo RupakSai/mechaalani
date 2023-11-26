@@ -1,0 +1,13 @@
+.pt2{
+    display: flex;
+}
+@media (max-width: 700px){
+    .pro-box{
+        align-items: center;
+        justify-content: center;
+    }
+    .pro-sub-box{
+        align-items: center;
+        justify-content: center;
+    }
+}
